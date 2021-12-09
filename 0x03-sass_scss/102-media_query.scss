@@ -1,0 +1,20 @@
+/* File that assigns font size to `h1` tags depending on the width of the screen, also assigns text color `#1D1D1D` to `h1.small` tags, when your screen width is smaller than `320px` */
+h1 {
+	font-size: 20px;
+
+	@media screen and (max-width: 960px) {
+		font-size: 18px;
+	}
+
+	@media screen and (max-width: 640px) {
+		font-size: 16px;
+	}
+
+	@media screen and (max-width: 320px) {
+		font-size: 14px;
+
+		&.small {
+			color: #1d1d1d;
+		}
+	}
+}
