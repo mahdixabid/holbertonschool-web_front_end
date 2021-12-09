@@ -1,0 +1,6 @@
+/* File that creates `H*` tags, where '*' is the size of the font used using `@for` statement */
+@for $i from 1 to 6 {
+	h#{$i} {
+		font-size: #{$i}px;
+	}
+}

@@ -1,0 +1,18 @@
+/* File that assigns font size `12px` to all tags of class `.info`, text color `#00FF00` to all tags of class `.success` and extend style of the class `.info` and text color `#FF0000` to all tags of class `.warning` and extend style of the class `.info`. */
+%info-style {
+	font-size: 12px;
+}
+
+.info {
+	@extend %info-style;
+}
+
+.success {
+	@extend %info-style;
+	color: #00ff00;
+}
+
+.warning {
+	@extend %info-style;
+	color: #ff0000;
+}

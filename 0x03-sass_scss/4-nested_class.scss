@@ -1,0 +1,8 @@
+/* File that assigns text color `#3D3D3D` to elements inside `body` tags and text color `#FF0000` to any elements of class `.red` inside `body` tags using nested declarations. */
+body {
+	color: #3d3d3d;
+
+	.red {
+		color: #ff0000;
+	}
+}

@@ -1,0 +1,13 @@
+/* File that assigns margin left and right at `10px` to `body` tags and margin left and right at `15px` to `div` tags using a mixin. */
+@mixin horizontalMargins($size) {
+	margin-left: $size;
+	margin-right: $size;
+}
+
+body {
+	@include horizontalMargins(10px);
+}
+
+div {
+	@include horizontalMargins(15px);
+}

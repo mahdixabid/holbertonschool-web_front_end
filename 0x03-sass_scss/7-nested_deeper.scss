@@ -1,0 +1,12 @@
+/* File that assigns font size `14px` to all `body` tags, font size `16px` to all `h1` tags inside `body` tags and font size `12px` to `h1` tags of class `.smaller` inside `body` tags using nested declarations. */
+body {
+	font-size: 14px;
+
+	h1 {
+		font-size: 16px;
+
+		&.smaller {
+			font-size: 12px;
+		}
+	}
+}
