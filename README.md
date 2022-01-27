@@ -20,7 +20,6 @@ Projects | Description
 [Scss](./0x03-sass_scss) | Learning about CSS preprocessors and Scss
 [Flexbox](./0x04-flexbox) | How to use Flexbox for the website's structure flow
 [Forms](./0x05-form) | Making forms with HTML and CSS
-[Responsive Design](./0x06-responsive_design) | How to make a website responsive across devices
 [Accessibility](./0x07-accessibility) | How to make a website accessible, identify problems and diagnose with tools
 [Implement a design from scratch](./0x09-implement_a_design_from_scratch) | Build a website given a design in Figma
 [Bootstrap](./0x0A-Bootstrap) | Learn all about Bootstrap and how to use it
