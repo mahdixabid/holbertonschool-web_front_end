@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Task 7</title>
+        <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+              crossorigin="anonymous">
+        </script>
+		
+    </head>
+
+    <body>
+        <script type="application/javascript">
+            $( document ).ready(function() {
+                function createSearchForm() {
+                    $("body").append("<input type=\"text\">", "<input type=\"submit\" value=\"Submit\">", "<ul>");
+                    $("input").last().addClass("submit");
+                    $(".submit").click(function() {
+                        let search = $("input").first().val();
+                        $("ul").empty();
+                        queryWikipedia(search);
+                    });
+                }
+                function addNewArticle(id, title, snippet) {
+                    let randId = Math.floor(Math.random() * Date.now())
+                    $("ul").append("<li>");
+                    $("li").last().addClass(`${randId}`);
+                    $(`.${randId}`).append("<p>", "<p>");
+                    $(`.${randId} p`).first().append(`<span>${id} - <b>${title}</b></span>`)
+                    $(`.${randId} p`).last().append(`${snippet}`);
+                }
+                function queryWikipedia(search) {
+                    $.ajax({
+                        type: "GET",
+                        url: `https://en.wikipedia.org/w/api.php?origin=*&action=query&list=search&srsearch=${search}&format=json`,
+                        success: function (res) {
+                            let resArr = res.query.search;
+                            for (let obj in resArr) {
+                                addNewArticle(resArr[obj].pageid, resArr[obj].title, resArr[obj].snippet);
+                            }
+                        },
+                        error: function() {
+                            console.log("Something went wrong.");
+                        }
+                    })
+                }
+                createSearchForm();
+            });
+        </script>
+    </body>
+
+</html>
